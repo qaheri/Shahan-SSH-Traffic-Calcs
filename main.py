@@ -7,7 +7,8 @@ from sklearn.preprocessing import PolynomialFeatures
 import time
 from tqdm import tqdm
 
-API_URL_1 = f"http://en.axelinh.xyz/apiV1/api.php?token={input("Token: ")}"
+token = input("Token: ")
+API_URL_1 = f"http://en.axelinh.xyz/apiV1/api.php?token={token}"
 PROXY = "http://127.0.0.1:1081"
 OUTPUT_FILE = "tempfile.bin"
 WAIT_TIME = 120
