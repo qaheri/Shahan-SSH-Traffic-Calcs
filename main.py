@@ -42,7 +42,7 @@ def get_panel_usage(api_url, user_id):
 
 def reset_panel_usage(api_url, user_id):
     response = requests.post(api_url, data={'method': 'resettraffic', 'username': user_id}, timeout=5)
-    if response.status_code == 200 and response.json().get('status') == 'success':
+    if response.status_code == 200:
         print(f"Traffic reset for user: {user_id}")
     else:
         print(f"Failed to reset traffic for user: {user_id}")
@@ -68,7 +68,6 @@ def get_cpu_architecture():
 def main(user_id):
     real_usage = []
     panel_usage = []
-    reset_panel_usage(API_URL_1, user_id)
 
     for link in DOWNLOAD_LINKS:
         file_size = download_file(link, OUTPUT_FILE)
@@ -108,4 +107,5 @@ def main(user_id):
 
 if __name__ == "__main__":
     user_id = input('Username: ')
+    reset_panel_usage(API_URL_1, user_id)
     main(user_id)
