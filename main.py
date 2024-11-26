@@ -67,6 +67,7 @@ def get_cpu_architecture():
 def main(user_id):
     real_usage = []
     panel_usage = []
+    reset_panel_usage(API_URL_1, user_id)
 
     for link in DOWNLOAD_LINKS:
         file_size = download_file(link, OUTPUT_FILE)
