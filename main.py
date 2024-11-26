@@ -11,7 +11,7 @@ token = input("Token: ")
 API_URL_1 = f"http://en.axelinh.xyz/apiV1/api.php?token={token}"
 PROXY = "http://127.0.0.1:1081"
 OUTPUT_FILE = "tempfile.bin"
-WAIT_TIME = 220
+WAIT_TIME = 300
 
 DOWNLOAD_LINKS = [
     "https://link.testfile.org/500MB",
